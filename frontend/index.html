@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Site</title>
+  <meta name="description" content="Site pessoal." />
+  <link rel="stylesheet" href="/static/src/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Meu Site</h1>
+    <p class="tagline">Site pessoal.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Novo item</h2>
+      <form id="item-form" autocomplete="off">
+        <input id="title" name="title" placeholder="Título" required />
+        <input id="description" name="description" placeholder="Descrição (opcional)" />
+        <button type="submit">Adicionar</button>
+      </form>
+      <p id="form-error" class="error" hidden></p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Itens</h2>
+        <button id="refresh" class="ghost" type="button">Atualizar</button>
+      </div>
+      <p id="stats" class="stats">carregando…</p>
+      <ul id="list" class="list"></ul>
+      <p id="empty" class="empty" hidden>Nada aqui ainda.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Frontend: JavaScript</span>
+    <span class="dot">•</span>
+    <span>Backend: Python / FastAPI</span>
+  </footer>
+
+  <script type="module" src="/static/src/app.js"></script>
+</body>
+</html>
